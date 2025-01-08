@@ -7,6 +7,9 @@ run:
 bin/Debug/net6.0/Course: *.fs
 	dotnet build
 
+build: *.fs
+	dotnet build
+
 initdb:
 	initdb -D ./shards/shard-1
 	echo "unix_socket_directories = '/tmp'" > ./shards/shard-1/postgresql.conf

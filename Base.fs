@@ -33,6 +33,11 @@ let reader conn =
     read
 
 
+let dropper execute =
+    let drop name = 
+        sprintf "DROP TABLE %s;" name |> execute
+    drop
+
 let truncater execute =
     let truncate name = 
         sprintf "TRUNCATE TABLE %s;" name |> execute

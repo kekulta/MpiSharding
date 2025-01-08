@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="Base.fs" />
     <Compile Include="User.fs" />
+    <Compile Include="Shard.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
