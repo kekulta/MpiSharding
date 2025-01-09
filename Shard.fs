@@ -1,5 +1,10 @@
 module MpiSharding.Shard
 
+open System
+open System.Data.Common
+open MPI
+open Npgsql
+
 open MPI
 
 let shardsNum = 2
@@ -14,3 +19,13 @@ let shardUserInserter (comm: Intracommunicator) generateUsers insertUsers =
         generateUsers usersNum |> insertUsers
 
     shardInsertUsers
+
+let shardMaxAgeProvider (comm: Intracommunicator) (read: string -> (DbDataReader -> string) -> string list): unit -> int =
+    let selectString = "SELECT MAX(age) FROM users;"
+
+    let shardMaxAge () =
+        let _, value = Int32.TryParse ((read selectString (fun db -> string db["age"]))[0])
+        value
+        (* comm.Reduce value Operation<int>.Max 0 *)
+
+    shardMaxAge

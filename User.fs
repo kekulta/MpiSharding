@@ -52,7 +52,7 @@ let generateUsers n =
 
     generate [] n
 
-let userReader read =
+let userReader (read: string -> (DbDataReader -> UserEntity) -> UserEntity list): unit -> UserEntity list =
     let selectString = "SELECT * FROM users;" 
     let makeUserEntity (reader: DbDataReader) 
                                     = { UserEntity.Id = string reader["id"]; 

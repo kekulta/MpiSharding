@@ -142,3 +142,24 @@
 2025-01-08 22:49:31.977 GMT [85826] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.807 s, sync=0.013 s, total=0.833 s; sync files=8, longest=0.004 s, average=0.002 s; distance=27 kB, estimate=2077 kB; lsn=0/1A62958, redo lsn=0/1A62920
 2025-01-08 22:49:33.895 GMT [85814] LOG:  checkpoint starting: time
 2025-01-08 22:49:34.527 GMT [85814] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.606 s, sync=0.015 s, total=0.632 s; sync files=6, longest=0.006 s, average=0.003 s; distance=31 kB, estimate=1116 kB; lsn=0/1A71660, redo lsn=0/1A71628
+2025-01-08 22:54:32.028 GMT [85826] LOG:  checkpoint starting: time
+2025-01-08 22:54:32.655 GMT [85826] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.606 s, sync=0.010 s, total=0.628 s; sync files=6, longest=0.004 s, average=0.002 s; distance=28 kB, estimate=1872 kB; lsn=0/1A69CD8, redo lsn=0/1A69CA0
+2025-01-08 22:54:33.546 GMT [85814] LOG:  checkpoint starting: time
+2025-01-08 22:54:34.063 GMT [85814] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.503 s, sync=0.007 s, total=0.518 s; sync files=5, longest=0.002 s, average=0.002 s; distance=20 kB, estimate=1006 kB; lsn=0/1A76898, redo lsn=0/1A76860
+2025-01-08 23:00:47.170 GMT [118982] ERROR:  syntax error at or near ";" at character 28
+2025-01-08 23:00:47.170 GMT [118982] STATEMENT:  SELECT * FROM users WHERE 
+	;
+2025-01-09 10:34:16.449 GMT [85813] LOG:  received fast shutdown request
+2025-01-09 10:34:16.451 GMT [85813] LOG:  aborting any active transactions
+2025-01-09 10:34:16.452 GMT [85813] LOG:  background worker "logical replication launcher" (PID 85819) exited with exit code 1
+2025-01-09 10:34:16.452 GMT [85814] LOG:  shutting down
+2025-01-09 10:34:16.455 GMT [85814] LOG:  checkpoint starting: shutdown immediate
+2025-01-09 10:34:16.461 GMT [85814] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.009 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=906 kB; lsn=0/1A76948, redo lsn=0/1A76948
+2025-01-09 10:34:16.467 GMT [85813] LOG:  database system is shut down
+2025-01-09 10:34:16.553 GMT [85825] LOG:  received fast shutdown request
+2025-01-09 10:34:16.555 GMT [85825] LOG:  aborting any active transactions
+2025-01-09 10:34:16.558 GMT [85825] LOG:  background worker "logical replication launcher" (PID 85831) exited with exit code 1
+2025-01-09 10:34:16.558 GMT [85826] LOG:  shutting down
+2025-01-09 10:34:16.560 GMT [85826] LOG:  checkpoint starting: shutdown immediate
+2025-01-09 10:34:16.567 GMT [85826] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.009 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=1685 kB; lsn=0/1A69D88, redo lsn=0/1A69D88
+2025-01-09 10:34:16.578 GMT [85825] LOG:  database system is shut down
